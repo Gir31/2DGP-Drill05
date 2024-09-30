@@ -2,6 +2,7 @@ from pico2d import *
 
 
 open_canvas()
+background = load_image('TUK_GROUND.png')
 character = load_image('animation_sheet.png')
 
 
@@ -43,6 +44,7 @@ frame = 0
 
 while running:
     clear_canvas()
+    background.draw(400, 300)
     character.clip_draw(frame*100, 100, 100, 100, x, y)
     update_canvas()
     handle_events()
